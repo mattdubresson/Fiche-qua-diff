@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\pagestyle{fancy}
+
+% Nettoyer les styles par défaut
+\fancyhf{}
+
+% En-têtes
+\fancyhead[L]{Fiche sur les démonstrations par récurrence} % à gauche
+\fancyhead[R]{Matteo Dubresson} % à droite
+
+% Pieds de page
+\fancyfoot[C]{\thepage} % numéro de page centré
+
+%Titre et généralités
+\title{Fiche sur les démonstrations\\par récurrence}
+\date{17/09/2025}
+\author{}
+
+%Espace entre les subsections
+\titlespacing*{\subsection}{0pt}{5ex plus 0.5ex minus 0.2ex}{1.5ex plus 0.2ex}
+
+
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Reconnaitre une récurrence}
+Lorsque c'est mentionné dans l'ennoncé \textit{"Montrer que $\forall n \in \mathbb{N^*}$"}, \textit{"Montrer que la suite vérifie ... pour tout $n$"}, ou bien si jamais c'est un exercice de suite, ou une somme quelconque de nombres, c'est très probable qu'une récurrence soit demandée. Mais ce ne sera pas forcément dit explicitement (\textit{"Montrer par récurrence que"}). Il faut donc garder en tête que L'OBJECTIF de la récurrence est de montrer un résultat à n'importe quel ordre, facilement et rapidement. 
+
+
+\subsection*{Récurrence simple}
+Si une propriété est vraie à l'ordre $0$, et à l'ordre $n+1$, alors elle est vrai $\forall n$. Les étapes sont les suivantes :
+\begin{itemize}
+    \item Initialisation : on montre la propriété à l'odre $0$ ou $1$
+    \item Hérédité : on montre la propriété à l'ordre $n+1$ EN AYANT SUPPOSÉ l'ordre $n$ $\to$ il faut que l'hypothèse de récurrence SOIT UTILISÉE (la plupart du temps), et il faut bien le préciser
+    \item Conclusion : phrase bateau "On a montré la propriété à l'ordre $0$ et $n+1$, d'où le résultat suivant : (écrire la propriété) $\forall n \in \mathbb{N}$"
+
+\end{itemize}
+
+\subsection*{Récurrence forte}
+Même si une récurrence simple pourrait démontrer un certain résultat, dans certains cas une récurrence forte est plus adaptée. Plutot que de supposer un ordre $n$ quelconque, on suppose ici tout les ordres $k\le n$, pour démontrer $n+1$.\\
+Les étapes restent les mêmes que pour une récurrence simple, mais l'hérédité peut nécessiter quelques manipulations. 
+
+\subsection*{Applications}
+\begin{enumerate}
+    \item Soit $(u_n)_{n \in \mathbb{N^*}}$ la suite définie par $u_0 \in ]0;1]$ et par : $ u_{n+1} = \displaystyle \frac{u_n}{2} + \frac{u_n^2}{4}$. \\
+    Montrer que pour tout $n \in \mathbb{N}$, on a $0<u_n\le 1$ 
+    \vspace{4mm}
+    \item Montrer que 
+    \[ \forall n \in \mathbb{N^*}, 1+2+3 + ...+ n= \frac{n(n+1)}{2}\]
+    \vspace{4mm}
+    \item Montrer que 
+    \[ \forall n \in \mathbb{N^*}, 1^2+2^2+3^2 + ...+ n^2= \frac{n(n+1)(2n+1)}{6}\]
+    \vspace{4mm}
+    \item Soit $(u_n)_{n \in \mathbb{N^*}}$ la suite définie par $u_1 =3$ et pour tout $n\ge 1$ par : $ u_{n+1} = \displaystyle \frac{2}{n} \sum_{k=1}^n u_k $. \\
+    Montrer que $\forall n \in \mathbb{N^*}$, $u_n =3n$
+
+\end{enumerate}
+
+
+
+
+\end{document}
+

@@ -1,0 +1,36 @@
+# --- Fichiers de compilation principaux LaTeX ---
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.pdfsync
+
+# --- Index, Glossaires et Bibliographie ---
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.ist
+*.glg
+*.glo
+*.gls
+*.bcf
+*.run.xml
+
+# --- Structures et Table des matières ---
+*.toc
+*.lof
+*.lot
+*.out
+
+# --- Fichiers temporaires d'éditeurs (Texmaker, TeXstudio, etc.) ---
+*.bak
+*.sav
+*.tex.backup
+*~
+
+# --- Optionnel : Exclure le PDF final ---
+# Décoche la ligne suivante si tu NE VEUX PAS envoyer tes PDF sur GitHub
+# *.pdf
